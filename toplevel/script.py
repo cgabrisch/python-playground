@@ -1,4 +1,8 @@
 #!/usr/bin/python3
-import toplevel
+import sys, toplevel
 
-toplevel.print_toplevel_status()
+print('Module toplevel:')
+toplevel.print_toplevel_status(toplevel)
+
+print('Current module:')
+toplevel.print_toplevel_status(sys.modules[__name__])
